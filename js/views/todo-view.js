@@ -10,7 +10,7 @@ var app = app || {};
 	// The DOM element for a todo item...
 	app.TodoView = Backbone.View.extend({
 		//... is a list tag.
-		tagName:  'li',
+		tagName: 'li',
 
 		// Cache the template function for a single item.
 		template: _.template($('#item-template').html()),
@@ -19,6 +19,7 @@ var app = app || {};
 		events: {
 			'click .toggle': 'toggleCompleted',
 			'dblclick label': 'edit',
+			'click .edit-btn': 'edit',
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
